@@ -56,3 +56,16 @@ Unirest.patch("http://www.mocky.io/v2/5a9ce7663100006800ab515d")
 
 OPTIONS:
 Unirest.options("http://www.mocky.io/v2/5a9ce7663100006800ab515d")
+  
+// Request
+Article article = new Article("ID1213", "Guide to Rest", "baeldung");
+HttpResponse<JsonNode> jsonResponse 
+= Unirest.post("http://www.mocky.io/v2/5a9ce7663100006800ab515d")
+.body(article)
+.asJson();
+assertEquals(201, jsonResponse.getStatus());  
+  
+HttpResponse<JsonNode> jsonResponse 
+= Unirest.post("http://www.mocky.io/v2/5a9ce7663100006800ab515d")
+.body("{\"name\":\"Sam Baeldung\", \"city\":\"viena\"}")
+.asJson();
