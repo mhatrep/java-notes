@@ -69,3 +69,34 @@ HttpResponse<JsonNode> jsonResponse
 = Unirest.post("http://www.mocky.io/v2/5a9ce7663100006800ab515d")
 .body("{\"name\":\"Sam Baeldung\", \"city\":\"viena\"}")
 .asJson();
+
+HttpResponse<JsonNode> jsonResponse 
+= Unirest.get("http://www.mocky.io/v2/5a9ce37b3100004f00ab5154/{userId}")
+.routeParam("userId", "123")
+
+HttpResponse<JsonNode> jsonResponse 
+= Unirest.get("http://www.mocky.io/v2/5a9ce37b3100004f00ab5154")
+.queryString("apiKey", "123")
+
+//////////////////////////////////////////////////////////
+Map<String, String> headers = new HashMap<>();
+headers.put("accept", "application/json");
+headers.put("Authorization", "Bearer 5a9ce37b3100004f00ab5154");
+
+Map<String, Object> fields = new HashMap<>();
+fields.put("name", "Sam Baeldung");
+fields.put("id", "PSP123");
+
+HttpResponse<JsonNode> jsonResponse 
+= Unirest.put("http://www.mocky.io/v2/5a9ce7853100002a00ab515e")
+.headers(headers).fields(fields)
+.asJson();
+
+assertNotNull(jsonResponse.getBody());
+assertEquals(202, jsonResponse.getStatus());
+
+
+HttpResponse<JsonNode> jsonResponse 
+= Unirest.get("http://www.mocky.io/v2/5a9ce37b3100004f00ab5154")
+.header("accept", "application/json").queryString("apiKey", "123")
+.asJson();
