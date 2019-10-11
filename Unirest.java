@@ -1,5 +1,12 @@
 // Ref: https://www.baeldung.com/unirest
 
+<dependency>
+    <groupId>com.mashape.unirest</groupId>
+    <artifactId>unirest-java</artifactId>
+    <version>1.4.9</version>
+</dependency>
+
+
 Unirest.clearDefaultHeaders();
 Unirest.setProxy(new HttpHost("localhost", 8080));
 Unirest.shutdown();
