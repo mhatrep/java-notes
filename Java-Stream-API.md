@@ -1,8 +1,8 @@
 # JAVA Stream API
 
--Transforming
--Filtering
--Searching
--Reordering
--Summarizing
--Grouping
+-- Transforming
+-- Filtering
+-- Searching
+-- Reordering
+-- Summarizing
+-- Grouping
