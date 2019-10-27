@@ -6,6 +6,7 @@
     <version>1.4.9</version>
 </dependency>
 
+----------------------------------------------------
 
 Unirest.clearDefaultHeaders();
 Unirest.setProxy(new HttpHost("localhost", 8080));
@@ -38,7 +39,10 @@ Future<HttpResponse<JsonNode>> future = Unirest.post(
   }
   });
         
-      
+
+----------------------------------------------------
+    
+    
 // Response
 jsonResponse.getStatus()
 jsonResponse.getHeaders();
