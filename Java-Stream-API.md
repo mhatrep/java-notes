@@ -14,6 +14,9 @@ Java Stream API provides lots of in-built functionality to help in performing op
 -- Grouping
 
 
+----------------------------------------------------
+
+
 # Stream pipeline. 
 
 The stream pipeline made of the following three parts:
